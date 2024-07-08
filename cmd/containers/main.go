@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/panorama47/deploytools/pkg/containers"
 	klog "k8s.io/klog/v2"
 	"net/http"
 )
@@ -19,7 +20,7 @@ func start() error {
 		})
 	})
 
-	v1.GET("/getLog", routers.GetNameTest(router))
+	v1.GET("/getLog", containers.GetNameTest(router))
 	err := router.Run(":3050")
 	if err != nil {
 		return err

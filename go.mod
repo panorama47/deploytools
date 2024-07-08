@@ -1,4 +1,4 @@
-module tools
+module github.com/panorama47/deploytools
 
 go 1.19
 
